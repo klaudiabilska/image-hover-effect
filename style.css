@@ -1,0 +1,64 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    background-color: black;
+}
+
+
+
+
+.grid-container {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	grid-gap: 10px;
+	width: 80%;
+	margin: 0 auto; /* This centers the container horizontally */
+}
+
+.grid-item {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+    overflow: hidden;
+}
+
+
+img {
+    width: 100%;
+    max-width: 500px;
+    cursor: pointer;
+    height: 100%;
+    object-fit: cover;
+    overflow: hidden;
+    aspect-ratio: 2 / 3;
+
+}
+
+
+#img1 {
+    filter: url(#noise1);
+}
+
+#img2 {
+    filter: url(#noise2);
+}
+
+#img3 {
+    filter: url(#noise3);
+}
+
+
+@keyframes pulse {
+    from, to {
+        scale: 1;
+    }
+
+    50% {
+        scale: 1.08;
+    }
+}
+
+#img1:hover, #img2:hover, #img3:hover {
+    animation: pulse 800ms ease-in-out;
+} 

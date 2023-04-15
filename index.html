@@ -1,0 +1,135 @@
+<!-- based on https://www.youtube.com/watch?v=z1wZp4jV4cQ -->
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Hover Effect</title>
+    <link rel="stylesheet" href="style.css">
+    
+</head>
+<body>
+    <svg>
+        <defs>
+            <filter id="noise1">
+                <feTurbulence
+                baseFrequency="0.7,0.8"
+                seed="0"
+                type="fractalNoise"
+                result="static"
+                >
+                <animate
+                attributeName="seed"
+                values="0;100"
+                dur="800ms"
+                repeatCount="1" 
+                begin="img1.mouseenter"                           
+                />
+            </feTurbulence>
+                <feDisplacementMap 
+                in="SourceGraphic" 
+                in2="static"
+                scale="0">
+                <animate
+                attributeName="scale"
+                values="0;20;0"
+                dur="800ms"
+                repeatCount="1" 
+                begin="img1.mouseenter"                           
+                />
+                </feDisplacementMap>
+            </filter>
+            <filter id="noise2">
+                <feTurbulence
+                baseFrequency="0.7,0.8"
+                seed="0"
+                type="fractalNoise"
+                result="static"
+                >
+                <animate
+                attributeName="seed"
+                values="0;100"
+                dur="800ms"
+                repeatCount="1" 
+                begin="img2.mouseenter"                           
+                />
+            </feTurbulence>
+                <feDisplacementMap 
+                in="SourceGraphic" 
+                in2="static"
+                scale="0">
+                <animate
+                attributeName="scale"
+                values="0;20;0"
+                dur="800ms"
+                repeatCount="1" 
+                begin="img2.mouseenter"                           
+                />
+                </feDisplacementMap>
+            </filter>
+            <filter id="noise3">
+                <feTurbulence
+                baseFrequency="0.7,0.8"
+                seed="0"
+                type="fractalNoise"
+                result="static"
+                >
+                <animate
+                attributeName="seed"
+                values="0;100"
+                dur="800ms"
+                repeatCount="1" 
+                begin="img3.mouseenter"                           
+                />
+            </feTurbulence>
+                <feDisplacementMap 
+                in="SourceGraphic" 
+                in2="static"
+                scale="0">
+                <animate
+                attributeName="scale"
+                values="0;20;0"
+                dur="800ms"
+                repeatCount="1" 
+                begin="img3.mouseenter"                           
+                />
+                </feDisplacementMap>
+            </filter>
+            <filter id="text">
+                <feTurbulence
+                baseFrequency="0.7,0.8"
+                seed="0"
+                type="fractalNoise"
+                result="static"
+                >
+                <animate
+                attributeName="seed"
+                values="0;100"
+                dur="800ms"
+                repeatCount="1" 
+                begin="text.mouseenter"                           
+                />
+            </feTurbulence>
+                <feDisplacementMap 
+                in="SourceGraphic" 
+                in2="static"
+                scale="0">
+                <animate
+                attributeName="scale"
+                values="0;20;0"
+                dur="800ms"
+                repeatCount="1" 
+                begin="text.mouseenter"                           
+                />
+                </feDisplacementMap>
+            </filter>
+        </defs>
+    </svg>
+        <div class="grid-container">
+            <div class="grid-item"><img id="img1" src="https://i.pinimg.com/originals/3b/c8/9b/3bc89b74b0f6da9a9323b40a2edbd16e.png"></div>
+            <div class="grid-item"><img id="img2" src="https://i.pinimg.com/originals/b4/44/0a/b4440a9e7f9bb632a9823c02844c6c11.jpg"></div>
+            <div class="grid-item"><img id="img3" src="https://64.media.tumblr.com/be991c915d22c568552be619cdc6b4c4/2f316a19586855a6-55/s1280x1920/3d3a80fe48fac225e7a5688a2b894ab17f9d55df.jpg" ></div>
+        </div>
+</body>
+</html>
